@@ -41,10 +41,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#eef6ff]">
+    <div className="min-h-screen bg-[#eef6ff] overflow-x-hidden">
       <Navbar activeSection={activeSection} onNavClick={handleNavClick} />
 
-      <main className="mt-6 space-y-16 md:space-y-24">
+      <main className="mt-4 space-y-14 md:space-y-24">
         <section id="home" className="scroll-mt-24">
           <Hero />
         </section>
