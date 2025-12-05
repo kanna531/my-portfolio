@@ -5,3 +5,40 @@ html {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* === Custom animations & tilt === */
+.fade-in-section {
+  animation: fadeInUp 0.45s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-fade {
+  animation: modalFade 0.25s ease-out both;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tilt-card {
+  transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out, background-color 0.18s ease-out;
+  transform-style: preserve-3d;
+}

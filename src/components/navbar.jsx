@@ -10,7 +10,8 @@ const navItems = [
 
 const Navbar = ({ activeSection, onNavClick }) => {
   return (
-    <nav className="w-full flex items-center justify-between px-10 py-5 bg-[#eef6ff] sticky top-0 z-50">
+    <nav className="w-full flex items-center justify-between px-10 py-5 bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50">
+
       {/* Logo */}
 <div
   className="flex items-center gap-2 text-xl font-semibold cursor-pointer"

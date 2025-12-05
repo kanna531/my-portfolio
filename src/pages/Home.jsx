@@ -5,6 +5,7 @@ import Hero from "../components/hero";
 import About from "../components/about";
 import Portfolio from "../components/portfolio";
 import Services from "../components/services";
+import Footer from "../components/footer";
 
 const Home = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -59,6 +60,9 @@ const Home = () => {
         <section id="services" className="scroll-mt-24">
           <Services />
         </section>
+
+        <Footer onNavClick={handleNavClick} />
+        
       </main>
     </div>
   );
