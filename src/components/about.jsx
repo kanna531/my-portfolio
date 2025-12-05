@@ -17,7 +17,7 @@ const About = () => {
       </div>
 
       {/* Main About Layout */}
-      <div className="max-w-6xl mx-auto mt-14 px-6 flex flex-col md:flex-row items-center gap-16">
+      <div className="max-w-6xl mx-auto mt-10 md:mt-14 px-6 flex flex-col md:flex-row ...">
         
         {/* Left Circular Image */}
         <div className="flex-1 flex justify-center">

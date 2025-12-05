@@ -3,7 +3,7 @@ import heroImg from "../assets/karthik.png"; // 👈 change name/path if needed
 
 const Hero = () => {
   return (
-    <section className="bg-[#eef6ff] min-h-[80vh] flex items-center">
+    <section className="bg-[#eef6ff] min-h-[60vh] md:min-h-[80vh] flex items-center py-10 md:py-0">
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-10 px-6 md:px-10">
         
         {/* Left content */}

@@ -44,7 +44,7 @@ const Home = () => {
     <div className="min-h-screen bg-[#eef6ff]">
       <Navbar activeSection={activeSection} onNavClick={handleNavClick} />
 
-      <main className="mt-6 space-y-24">
+      <main className="mt-6 space-y-16 md:space-y-24">
         <section id="home" className="scroll-mt-24">
           <Hero />
         </section>
