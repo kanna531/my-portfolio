@@ -4,7 +4,7 @@ import React, { useMemo, useState } from "react";
 import social1 from "../assets/1.jpg";
 import web1 from "../assets/1.jpg";
 import posterPdf from "../assets/1.jpg";
-import postPdf from "../assets/5.pdf";
+import postPdf from "../assets/6.pdf";
 
 const CATEGORIES = [
   "All",
