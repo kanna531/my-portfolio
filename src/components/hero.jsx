@@ -1,10 +1,18 @@
+// src/components/Hero.jsx
 import React from "react";
-import heroImg from "../assets/karthik.png"; // 👈 change name/path if needed
+import heroImg from "../assets/karthik.png"; // keep your existing image import
 
 const Hero = () => {
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <section className="bg-[#eef6ff] min-h-[60vh] md:min-h-[80vh] flex items-center py-10 md:py-0">
-      <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-10 px-6 md:px-10">
+    <section className="bg-[#eef6ff]">
+      <div className="max-w-6xl mx-auto min-h-[50vh] md:min-h-[70vh] flex flex-col md:flex-row items-center justify-between gap-8 px-4 sm:px-6 py-6 md:py-10">
         
         {/* Left content */}
         <div className="flex-1 space-y-6">
@@ -25,24 +33,35 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            <button className="px-6 py-3 rounded-full bg-black text-white text-sm font-semibold">
+            {/* 👉 Let’s Talk → Contact section */}
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="px-6 py-3 rounded-full bg-black text-white text-sm font-semibold transform transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:scale-95"
+            >
               Let&apos;s Talk
             </button>
-            <button className="px-6 py-3 rounded-full bg-[#e6e6e6] text-sm font-semibold">
+
+            {/* 👉 My Works → Portfolio section */}
+            <button
+              onClick={() => scrollToSection("portfolio")}
+              className="px-6 py-3 rounded-full bg-[#e6e6e6] text-sm font-semibold text-gray-800 transform transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
+            >
               My Works
             </button>
           </div>
         </div>
 
         {/* Right image card */}
-        <div className="flex-1 flex justify-center">
-          <div>
+        <div className="flex-1 flex justify-center md:justify-end">
+          <div className="relative w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 bg-white rounded-[3rem] shadow-md flex items-center justify-center overflow-hidden">
             <img
               src={heroImg}
               alt="Karthik"
               className="w-full h-full object-cover"
             />
-            
+            <button className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
+              <span className="text-white text-xl">⭳</span>
+            </button>
           </div>
         </div>
       </div>

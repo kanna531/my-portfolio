@@ -12,6 +12,7 @@ const CATEGORIES = [
   "Web Designs",
   "Print Designs",
   "Political Posters",
+  
   "Brand Board",
 ];
 

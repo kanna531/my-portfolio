@@ -5,6 +5,7 @@ import Hero from "../components/hero";
 import About from "../components/about";
 import Portfolio from "../components/portfolio";
 import Services from "../components/services";
+import Contact from "../components/contact";
 import Footer from "../components/footer";
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const sectionIds = ["home", "about", "portfolio", "services"];
+    const sectionIds = ["home", "about", "portfolio", "services", "contact"];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -44,9 +45,9 @@ const Home = () => {
     <div className="min-h-screen bg-[#eef6ff] overflow-x-hidden">
       <Navbar activeSection={activeSection} onNavClick={handleNavClick} />
 
-      <main className="mt-4 space-y-14 md:space-y-24">
+      <main className="mt-4 space-y-10 md:space-y-16">
         <section id="home" className="scroll-mt-24">
-          <Hero />
+          <Hero onNavClick={handleNavClick} />
         </section>
 
         <section id="about" className="scroll-mt-24">
@@ -61,9 +62,12 @@ const Home = () => {
           <Services />
         </section>
 
-        <Footer onNavClick={handleNavClick} />
-        
+        <section id="contact" className="scroll-mt-24">
+          <Contact />
+        </section>
       </main>
+
+      <Footer onNavClick={handleNavClick} />
     </div>
   );
 };

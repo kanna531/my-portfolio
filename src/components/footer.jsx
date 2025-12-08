@@ -34,7 +34,7 @@ const Footer = ({ onNavClick }) => {
         {/* Social Icons */}
         <div className="flex justify-center gap-6 text-xl text-gray-700">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/designbykarthik?igsh=MWo4ajFkYnhzeXZtcw=="
             target="_blank"
             className="hover:text-black"
           >
