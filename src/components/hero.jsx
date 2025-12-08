@@ -53,13 +53,13 @@ const Hero = () => {
 
         {/* Right image card */}
         <div className="flex-1 flex justify-center md:justify-end">
-          <div className="relative w-56 h-72 sm:w-64 sm:h-80 md:w-72 md:h-96 bg-white rounded-[3rem] shadow-md flex items-center justify-center overflow-hidden">
+          <div className="relative w-56 h-72 sm:w-64 sm:h-100 md:w-80 md:h-96  rounded-[3rem] ">
             <img
               src={heroImg}
               alt="Karthik"
               className="w-full h-full object-cover"
             />
-            <button className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
+            <button className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
               <span className="text-white text-xl">⭳</span>
             </button>
           </div>
