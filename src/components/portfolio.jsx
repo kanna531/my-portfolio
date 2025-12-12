@@ -4,7 +4,11 @@ import React, { useMemo, useState } from "react";
 import social1 from "../assets/1.jpg";
 import web1 from "../assets/1.jpg";
 import posterPdf from "../assets/1.jpg";
-import postPdf from "../assets/6.pdf";
+import ViQantAI from "../assets/ViQantAI.pdf";
+import TPMX from "../assets/TPMX.pdf";
+import Zarivaram from "../assets/Zarivaram.png";
+import Arise from "../assets/Arise.png";
+import Skin from "../assets/Skin.pdf";
 
 const CATEGORIES = [
   "All",
@@ -20,36 +24,43 @@ const CATEGORIES = [
 const allWorks = [
   {
     id: 1,
-    title: "Instagram Carousel for Brand X",
+    title: "Zarivaram",
     category: "Social Creatives",
-    tag: "Social Media · Design",
-    file: social1, // png/jpg
+    tag: "Zarivaram",
+    file: Zarivaram, // png/jpg
   },
   {
     id: 2,
-    title: "Personal Portfolio Website UI",
-    category: "Web Designs",
-    tag: "UI/UX · Web",
-    file: web1, // png/jpg
+    title: "Arise online program",
+    category: "Social Creatives",
+    tag: "Arise online program",
+    file: Arise, // png/jpg
   },
   {
     id: 3,
-    title: "Election Campaign Poster",
-    category: "Political Posters",
-    tag: "Campaign · Poster · Print",
-    file: posterPdf, // pdf
+    title: "SKINCARE CAROUSEL",
+    category: "Social Creatives",
+    tag: "SKINCARE CAROUSEL",
+    file: Skin, // png/jpg
+  },
+  {
+    id: 4,
+    title: "Brand Board for TPMX",
+    category: "Brand Board",
+    tag: "TPMX Brand Board",
+    file: TPMX, // pdf
   },
 
   {
-    id: 4,
-    title: "Pay Slip",
-    category: "Political Posters",
-    tag: "PDF",
-    file: postPdf,
+    id: 5,
+    title: "Brand Board for ViQantAI",
+    category: "Brand Board",
+    tag: "ViQuantAI Brand Board",
+    file: ViQantAI, //pdf
   }
   // ➕ Add more:
   // {
-  //   id: 4,
+  //   id: 6,
   //   title: "Brand Board for Cafe Bliss",
   //   category: "Brand Board",
   //   tag: "Logo · Palette · Typography",
@@ -149,13 +160,14 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="bg-[#eef6ff] py-16">
+    <section className="bg-[#eef6ff] py-16 -mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
         {/* Heading */}
         <div className="text-center mx-auto fade-in-section">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-            My Creative Space
-          </h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+               My Works
+              </h2>
+
           <p className="mt-2 text-sm md:text-base text-gray-600 max-w-xl mx-auto">
             A curated collection of my designs across social media, web, print,
             political campaigns, and branding. Use the filters to explore

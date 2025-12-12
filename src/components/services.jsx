@@ -25,7 +25,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-[#eef6ff] py-16">
+    <section className="bg-[#eef6ff] py-16 -mt-20">
       <div className="max-w-6xl mx-auto px-6 space-y-10">
         {/* Heading */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">

@@ -1,22 +1,22 @@
 // src/components/Hero.jsx
 import React from "react";
-import heroImg from "../assets/karthik.png"; // keep your existing image import
+import heroImg from "../assets/karthik.png"; // update path if needed
 
 const Hero = () => {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <section className="bg-[#eef6ff]">
       <div className="max-w-6xl mx-auto min-h-[50vh] md:min-h-[70vh] flex flex-col md:flex-row items-center justify-between gap-8 px-4 sm:px-6 py-6 md:py-10">
-        
         {/* Left content */}
         <div className="flex-1 space-y-6">
-          <button className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-xs font-semibold">
+          <button
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm text-xs font-semibold"
+            aria-label="Available for opportunities"
+          >
             <span className="text-lg">✦</span>
             <span>Available For Opportunities</span>
           </button>
@@ -33,7 +33,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap items-center gap-4">
-            {/* 👉 Let’s Talk → Contact section */}
+            {/* Let's Talk - scroll to contact */}
             <button
               onClick={() => scrollToSection("contact")}
               className="px-6 py-3 rounded-full bg-black text-white text-sm font-semibold transform transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:scale-95"
@@ -41,9 +41,9 @@ const Hero = () => {
               Let&apos;s Talk
             </button>
 
-            {/* 👉 My Works → Portfolio section */}
+            {/* My Works - scroll to works */}
             <button
-              onClick={() => scrollToSection("portfolio")}
+              onClick={() => scrollToSection("works")}
               className="px-6 py-3 rounded-full bg-[#e6e6e6] text-sm font-semibold text-gray-800 transform transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md active:scale-95"
             >
               My Works
@@ -53,15 +53,12 @@ const Hero = () => {
 
         {/* Right image card */}
         <div className="flex-1 flex justify-center md:justify-end">
-          <div className="relative w-56 h-72 sm:w-64 sm:h-100 md:w-80 md:h-96  rounded-[3rem] ">
+          <div className="">
             <img
               src={heroImg}
-              alt="Karthik"
+              alt="Karthik portrait"
               className="w-full h-full object-cover"
             />
-            <button className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-black flex items-center justify-center shadow-lg">
-              <span className="text-white text-xl">⭳</span>
-            </button>
           </div>
         </div>
       </div>

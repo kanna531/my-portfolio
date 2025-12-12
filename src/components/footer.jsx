@@ -1,75 +1,37 @@
+// src/components/Footer.jsx
 import React from "react";
 
 const Footer = ({ onNavClick }) => {
+  const go = (id) => {
+    if (onNavClick) return onNavClick(id);
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
-    <footer className="bg-white/90 backdrop-blur-lg border-t border-gray-200 py-10 mt-20">
-
+    <footer className="bg-[#eef6ff] border-t border-gray-300 py-10 mt-10">
       <div className="max-w-6xl mx-auto px-6 text-center space-y-6">
-
-        {/* Logo */}
         <div
+          onClick={() => go("home")}
           className="flex justify-center items-center gap-2 text-xl font-semibold cursor-pointer"
-          onClick={() => onNavClick("home")}
         >
           <span className="text-black text-2xl">✦</span>
           <span>karthik.</span>
         </div>
 
-        {/* Navigation Links */}
         <div className="flex justify-center gap-6 text-sm font-medium text-gray-700">
-          <button onClick={() => onNavClick("home")} className="hover:text-black">
-            Home
-          </button>
-          <button onClick={() => onNavClick("about")} className="hover:text-black">
-            About
-          </button>
-          <button onClick={() => onNavClick("portfolio")} className="hover:text-black">
-            Portfolio
-          </button>
-          <button onClick={() => onNavClick("services")} className="hover:text-black">
-            Services
-          </button>
+          <button onClick={() => go("home")} className="hover:text-black">Home</button>
+          <button onClick={() => go("about")} className="hover:text-black">About</button>
+          <button onClick={() => go("works")} className="hover:text-black">My Works</button>
+          <button onClick={() => go("services")} className="hover:text-black">Services</button>
+           <button onClick={() => go("contact")} className="hover:text-black">Contact</button>
         </div>
 
-        {/* Social Icons */}
         <div className="flex justify-center gap-6 text-xl text-gray-700">
-          <a
-            href="https://www.instagram.com/designbykarthik?igsh=MWo4ajFkYnhzeXZtcw=="
-            target="_blank"
-            className="hover:text-black"
-          >
-            <i className="fa-brands fa-instagram"></i>
-          </a>
-
-          <a
-            href="https://dribbble.com"
-            target="_blank"
-            className="hover:text-black"
-          >
-            <i className="fa-brands fa-dribbble"></i>
-          </a>
-
-          <a
-            href="https://behance.net"
-            target="_blank"
-            className="hover:text-black"
-          >
-            <i className="fa-brands fa-behance"></i>
-          </a>
-
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            className="hover:text-black"
-          >
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
+          {/* social links */}
         </div>
 
-        {/* Copyright */}
-        <p className="text-gray-600 text-xs">
-          © {new Date().getFullYear()} karthik. All rights reserved.
-        </p>
+        <p className="text-gray-600 text-xs">© {new Date().getFullYear()} karthik. All rights reserved.</p>
       </div>
     </footer>
   );
