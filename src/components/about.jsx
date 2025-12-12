@@ -1,6 +1,6 @@
 import React from "react";
 import aboutImg from "../assets/about-photo.png";
-import resumeFile from "../assets/karthik_resume.pdf";
+import resume from "../assets/karthik_resume.pdf";
 
 const About = () => {
   return (
@@ -33,7 +33,7 @@ const About = () => {
           </p>
 
           <a
-            href={resumeFile}
+            href={resume}
             download="Karthik-Resume.pdf"
             className="inline-block px-6 py-3 rounded-full bg-black text-white text-sm font-semibold shadow-md hover:-translate-y-0.5 hover:shadow-lg active:scale-95 transition-all"
           >
